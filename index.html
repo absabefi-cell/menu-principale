@@ -1,141 +1,123 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio de mes projets</title>
-  <style>
+<meta charset="UTF-8">
+<title>Jeux éducatifs gratuits</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    :root {
+        --bg: #0d1117;
+        --box: #131a24;
+        --text: #eaf0ff;
+        --accent1: #ff005c;
+        --accent2: #00d2ff;
+        --accent3: #ffbe0b;
+        --shadow: rgba(0,0,0,0.55);
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f7f9fb;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    header {
-      background: #1f2937;
-      color: white;
-      padding: 40px 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.2em;
-    }
-
-    p {
-      color: #d1d5db;
-      font-size: 1.1em;
-    }
-
-    .projects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 40px 20px;
+        margin: 0;
+        font-family: "Poppins", Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 18px;
     }
 
     .card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 25px;
-      width: 260px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+        max-width: 780px;
+        width: 100%;
+        background: var(--box);
+        border-radius: 20px;
+        padding: 30px 22px;
+        box-shadow: 0 12px 40px var(--shadow);
+        border: 3px solid var(--accent2);
+        animation: pop 0.4s ease;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    @keyframes pop {
+        from { transform: scale(0.92); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
     }
 
-    .emoji {
-      font-size: 2.5em;
+    h1 {
+        font-size: 2.1rem;
+        font-weight: bold;
+        line-height: 1.3;
+        margin: 0 0 18px;
+        padding: 8px 12px;
+        border-left: 8px solid var(--accent1);
+        background: linear-gradient(90deg, rgba(255,0,92,0.2), transparent);
+        border-radius: 6px;
     }
 
-    a {
-      text-decoration: none;
-      color: #2563eb;
-      font-weight: bold;
-      display: block;
-      margin-top: 10px;
+    .bloc {
+        padding: 10px 14px;
+        margin-bottom: 14px;
+        border-radius: 10px;
+        line-height: 1.6;
+        font-size: 1.05rem;
+        border: 2px dashed var(--accent3);
+        background: linear-gradient(135deg, rgba(255,190,11,0.13), transparent);
     }
 
-    footer {
-      background: #111827;
-      color: #9ca3af;
-      padding: 20px;
-      font-size: 0.9em;
+    .btn-wrap {
+        margin-top: 22px;
+        text-align: center;
     }
-  </style>
+
+    button {
+        border: none;
+        border-radius: 12px;
+        padding: 13px 30px;
+        font-size: 1.05rem;
+        font-weight: 700;
+        cursor: pointer;
+        color: #000;
+        background: linear-gradient(90deg, var(--accent2), var(--accent1));
+        box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+        transition: 0.15s ease;
+    }
+
+    button:hover {
+        transform: translateY(-2px) scale(1.02);
+    }
+    button:active {
+        transform: scale(0.96);
+    }
+
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>👋 Bienvenue sur mon GitHub</h1>
-    <p>Voici mes projets hébergés sur GitHub Pages</p>
-  </header>
+<div class="card">
 
-  <section class="projects">
-    <div class="card">
-      <div class="emoji">🎮</div>
-      <h3>Jeu éducatif HTML</h3>
-      <a href="https://absabefi.github.io/jeu-enfant/" target="_blank">Voir le projet</a>
+    <h2>🎮 Jeux éducatifs gratuits — Apprendre en s’amusant</h2>
+
+    <p class="bloc">
+        Explore les mathématiques, la physique, l’astronomie, la logique et la programmation à
+        travers des mini-jeux interactifs pensés pour les élèves, étudiants, parents et enseignants.
+    </p>
+
+    <p class="bloc">
+        🧠 Horloge interactive — ✈️ portance d’aile — 📈 courbes 3D — ⚡ collisions élastiques — 🌍 marées Terre-Lune-Soleil — 🎲 puzzles enfants, et plus encore…
+    </p>
+
+    <div class="btn-wrap">
+        <button onclick="ouvrirMenu()">🚀 Accéder aux jeux</button>
     </div>
 
-    <div class="card">
-      <div class="emoji">✈️</div>
-      <h3>Simulation avion</h3>
-      <a href="https://absabefi.github.io/sim-avion/" target="_blank">Voir le projet</a>
-    </div>
+</div>
 
-    <div class="card">
-      <div class="emoji">🔬</div>
-      <h3>Projet Biochimie</h3>
-      <a href="https://absabefi.github.io/bch3520/" target="_blank">Voir le projet</a>
-    </div>
+<script>
+function ouvrirMenu() {
+    window.location.href = "https://jeuxeducatif.github.io/Menu-principale-/";
+}
+</script>
 
-    <div class="card">
-      <div class="emoji">💻</div>
-      <h3>Application Python Web</h3>
-      <a href="https://absabefi.github.io/app-pyweb/" target="_blank">Voir le projet</a>
-    </div>
-
-    <div class="card">
-      <div class="emoji">🐱</div>
-      <h3>Images Chat</h3>
-      <a href="https://absabefi-cell.github.io/Images-chat/" target="_blank">Voir le projet</a>
-    </div>
-
-    <div class="card">
-      <div class="emoji">⚽</div>
-      <h3>Jeu des Boules V2</h3>
-      <a href="https://absabefi-cell.github.io/Jeuxboulesv2/" target="_blank">Voir le projet</a>
-    </div>
-
-    <div class="card">
-      <div class="emoji">🦁</div>
-      <h3>Jeu des Animaux</h3>
-      <a href="https://absabefi-cell.github.io/Jeux-animeaux/" target="_blank">Voir le projet</a>
-    </div>
-
-    <div class="card">
-      <div class="emoji">📈</div>
-      <h3>Traceur de Courbe 3D</h3>
-      <a href="https://absabefi-cell.github.io/Traceur-courbe-3D/" target="_blank">Voir le projet</a>
-    </div>
-
-    <div class="card">
-      <div class="emoji">🧮</div>
-      <h3>Calculatrice en Ligne</h3>
-      <a href="https://github.com/absabefi-cell/Calculatrice-en-ligne" target="_blank">Voir le projet</a>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 absabefi — Tous droits réservés
-  </footer>
 </body>
 </html>
